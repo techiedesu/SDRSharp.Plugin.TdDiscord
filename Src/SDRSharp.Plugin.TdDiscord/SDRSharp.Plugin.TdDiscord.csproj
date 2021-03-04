@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <Platforms>AnyCPU</Platforms>
+    <UseWindowsForms>true</UseWindowsForms>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SDRSharp.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Radio\sdrsharp_plugins\sdrplugins\lib\SDRSharp.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SDRSharp.PanView">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Radio\sdrsharp_plugins\sdrplugins\lib\SDRSharp.PanView.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SDRSharp.Radio">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Radio\sdrsharp_plugins\sdrplugins\lib\SDRSharp.Radio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

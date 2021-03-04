@@ -1,0 +1,1 @@
+﻿  <add key="Discord RPC" value="SDRSharp.Plugin.TdDiscord.DiscordPlugin,SDRSharp.Plugin.TdDiscord" />
