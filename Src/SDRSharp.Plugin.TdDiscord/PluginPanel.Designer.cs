@@ -32,7 +32,8 @@ namespace SDRSharp.Plugin.TdDiscord
             this.isEnabledCheckBox = new System.Windows.Forms.CheckBox();
             this.showFrequencyCheckBox = new System.Windows.Forms.CheckBox();
             this.showRdsCheckBox = new System.Windows.Forms.CheckBox();
-            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+            this.discordAppIdLabel = new System.Windows.Forms.Label();
+            this.discordAppIdTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // isEnabledCheckBox
@@ -68,10 +69,30 @@ namespace SDRSharp.Plugin.TdDiscord
             this.showRdsCheckBox.UseVisualStyleBackColor = true;
             this.showRdsCheckBox.CheckedChanged += new System.EventHandler(this.ShowRdsCheckBox_CheckedChanged);
             // 
+            // discordAppIdLabel
+            // 
+            this.discordAppIdLabel.AutoSize = true;
+            this.discordAppIdLabel.Location = new System.Drawing.Point(24, 133);
+            this.discordAppIdLabel.Name = "discordAppIdLabel";
+            this.discordAppIdLabel.Size = new System.Drawing.Size(128, 25);
+            this.discordAppIdLabel.TabIndex = 3;
+            this.discordAppIdLabel.Text = "Discord AppId";
+            // 
+            // discordAppIdTextBox
+            // 
+            this.discordAppIdTextBox.Location = new System.Drawing.Point(24, 161);
+            this.discordAppIdTextBox.Name = "discordAppIdTextBox";
+            this.discordAppIdTextBox.Size = new System.Drawing.Size(273, 31);
+            this.discordAppIdTextBox.TabIndex = 4;
+            this.discordAppIdTextBox.TextChanged += new System.EventHandler(this.DiscordAppIdTextBox_TextChanged);
+            this.discordAppIdTextBox.KeyPress += DiscordAppIdTextBox_KeyPress;
+            // 
             // PluginPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.discordAppIdTextBox);
+            this.Controls.Add(this.discordAppIdLabel);
             this.Controls.Add(this.showRdsCheckBox);
             this.Controls.Add(this.showFrequencyCheckBox);
             this.Controls.Add(this.isEnabledCheckBox);
@@ -87,6 +108,7 @@ namespace SDRSharp.Plugin.TdDiscord
         private System.Windows.Forms.CheckBox isEnabledCheckBox;
         private System.Windows.Forms.CheckBox showFrequencyCheckBox;
         private System.Windows.Forms.CheckBox showRdsCheckBox;
-        private System.ComponentModel.BackgroundWorker backgroundWorker;
+        private System.Windows.Forms.Label discordAppIdLabel;
+        private System.Windows.Forms.TextBox discordAppIdTextBox;
     }
 }
