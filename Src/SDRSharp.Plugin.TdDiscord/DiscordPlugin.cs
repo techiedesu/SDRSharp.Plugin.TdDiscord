@@ -36,7 +36,7 @@ namespace SDRSharp.Plugin.TdDiscord
 
             control.PropertyChanged += Control_PropertyChanged;
 
-            _client = new DiscordRpcClient(_configService.Get(c => c.DiscordAppId), -1);
+            _client = new DiscordRpcClient(_configService.Get(c => c.DiscordAppId), pipe: -1);
             _client.Initialize();
 
             _configService.ConfigurationChanged += ConfigService_ConfigurationChanged;
